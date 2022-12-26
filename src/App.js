@@ -1,6 +1,5 @@
 import React from 'react';
 import {Router, Route, browserHistory, IndexRoute, Redirect} from 'react-router'
-import './App.scss';
 import CnamFormContainer from './containers/Cnam/CnamFormContainer';
 import HomeCnamContainer from './containers/Cnam/HomeCnamContainer';
 import Honoraires from './containers/Cnam/Honoraires';
