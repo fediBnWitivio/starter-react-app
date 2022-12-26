@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Router, Route, browserHistory, IndexRoute, Redirect} from 'react-router'
+import './App.scss';
+import CnamFormContainer from './containers/Cnam/CnamFormContainer';
+import HomeCnamContainer from './containers/Cnam/HomeCnamContainer';
+import Honoraires from './containers/Cnam/Honoraires';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router history={browserHistory}>
+                <Route name="home" path="/" component={HomeCnamContainer}/>
+                <Route name="cnam" path="/cnam/:fileId(/:patient)" component={CnamFormContainer}/>
+                <Route name="table" path="/honoraires(/:fileId)" component={Honoraires}/>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

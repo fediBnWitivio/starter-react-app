@@ -1,0 +1,68 @@
+body {
+    align-items: center;
+    align-self: center;
+    overflow-y: scroll;
+}
+
+.dashboard-container {
+    .dashboard {
+        padding: 5% 20%;
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 5%;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .for-label {
+            max-width: fit-content;
+            margin: auto;
+        }
+
+        .arrows {
+            a {
+                opacity: .9;
+                cursor: pointer;
+                &:hover {
+                    opacity: 1;
+                    color: #007bff;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            padding: 5%;
+            padding-top: 60px;
+            overflow-x: scroll;
+            .arrows {
+                height: unset !important;
+                a {
+                    font-size: 35px !important;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+.autocomplete {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    background: white;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1;
+
+    div {
+        padding: 5px 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        cursor: pointer;
+        overflow: hidden;
+        &:hover {
+            background: rgba(0,0,0,0.05);
+        }
+    }
+}
