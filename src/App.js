@@ -3,7 +3,6 @@ import {Router, Route, browserHistory, IndexRoute, Redirect} from 'react-router'
 import CnamFormContainer from './containers/Cnam/CnamFormContainer';
 import HomeCnamContainer from './containers/Cnam/HomeCnamContainer';
 import Honoraires from './containers/Cnam/Honoraires';
-import './App.scss';
 
 function App() {
     return (
